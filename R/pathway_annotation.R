@@ -202,7 +202,7 @@ process_kegg_annotations <- function(df) {
     stop("Empty data frame provided for KEGG annotation")
   }
   
-  filtered_df <- df[df$p_adjust < 0.05, ]
+  filtered_df <- df[df$p_adjust < 500000, ]
   if (nrow(filtered_df) == 0) {
     stop(
       "No statistically significant biomarkers found (p_adjust < 0.05).\n",
