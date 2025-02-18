@@ -98,6 +98,7 @@ ggpicrust2 <- function(file = NULL,
                        pathway,
                        daa_method = "ALDEx2",
                        ko_to_kegg = FALSE,
+                       p.value = "0.05",
                        p.adjust = "BH",
                        order = "group",
                        p_values_bar = TRUE,
@@ -133,7 +134,7 @@ ggpicrust2 <- function(file = NULL,
     }
 
     # Checking for statistically significant biomarkers in the dataset
-    num_significant_biomarkers <- sum(as.numeric(daa_results_df$p_adjust <= 0.05))
+    num_significant_biomarkers <- sum(as.numeric(daa_results_df$p_adjust <= p_value))
 
     if (num_significant_biomarkers == 0) {
       # If no biomarkers have p-values less than or equal to 0.05, issue a warning and suggest user to check FAQ
