@@ -134,7 +134,7 @@ ggpicrust2 <- function(file = NULL,
     }
 
     # Checking for statistically significant biomarkers in the dataset
-    num_significant_biomarkers <- sum(as.numeric(daa_results_df$p_adjust <= p_value))
+    num_significant_biomarkers <- sum(as.numeric(daa_results_df$p_adjust <= p.value))
 
     if (num_significant_biomarkers == 0) {
       # If no biomarkers have p-values less than or equal to 0.05, issue a warning and suggest user to check FAQ
