@@ -122,7 +122,7 @@ with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("cafferychen777/ggpicrust2")
+devtools::install_github("rfmarasigan/ggpicrust2")
 ```
 
 ## Dependent CRAN Packages
