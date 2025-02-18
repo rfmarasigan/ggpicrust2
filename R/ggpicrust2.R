@@ -138,7 +138,7 @@ ggpicrust2 <- function(file = NULL,
 
     if (num_significant_biomarkers == 0) {
       # If no biomarkers have p-values less than or equal to 0.05, issue a warning and suggest user to check FAQ
-      stop("Notice: There are no statistically significant biomarkers in the dataset. This is not an error, but it might indicate that the data do not contain any biomarkers passing the set significance threshold (p<=0.05). You may refer to the tutorial's FAQ for further help and suggestions.")
+      stop("Notice: There are no statistically significant biomarkers in the dataset. This is not an error, but it might indicate that the data do not contain any biomarkers passing the set significance threshold (p<=", p.value,"). You may refer to the tutorial's FAQ for further help and suggestions.")
     } else {
       message(paste("Success: Found", num_significant_biomarkers, "statistically significant biomarker(s) in the dataset."))
     }
